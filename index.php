@@ -5,9 +5,14 @@
     $controller = $separator[0];
     $action = ($separator[1] == NULL ? 'index' : $separator[1]);
     
+    function __autoload($file) {
+        require_once ('src/application/model/'.$file.'.php');
+    }
+
+
     require_once ('system/controller.php');
-    require_once ('config/config.php');
-    // require_once ('system/model.php');
+    //require_once ('config/config.php');
+    require_once ('system/model.php');
     
     require_once ('src/application/controller/'.$controller.'Controller.php');
     $application = new $controller();
