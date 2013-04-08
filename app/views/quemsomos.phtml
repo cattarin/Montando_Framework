@@ -1,7 +1,7 @@
-<!DOCTYPE>
-<html lang="pt-br">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
         <title>Sucos Juices - a melhor opção!</title>
         <link rel="stylesheet" type="text/css" href="./web-files/reset.css" />
@@ -20,8 +20,8 @@
                 </h1><!-- Logo -->
 
                 <ul id="menu">
-                    <li class="current"><a href="./index">Home</a></li>
-                    <li><a href="./quemsomos">Quem somos</a></li>
+                    <li><a href="./index">Home</a></li>
+                    <li class="current"><a href="./quemsomos">Quem somos</a></li>
                     <li><a href="./servicos">Serviços</a></li>
                     <li><a href="./faleconosco">Fale conosco</a></li>
                 </ul><!-- Menu -->
@@ -29,38 +29,39 @@
 
             <div id="corpo">
                 <div id="esq">
-                    <div id="destaque">
-                        <?php foreach ($view_receitas_destaque as $receitas_destaque): ?>
-                        <img src="<?php echo $receitas_destaque['imagem']; ?>" width="648" height="311" alt=<?php echo $receitas_destaque['titulo']; ?> />
-                        <div class="txts">
-                            <h1><?php echo $receitas_destaque['titulo']; ?></h1>
-                            <p>
-                                <?php echo $receitas_destaque['resumo']; ?>
-                            </p>
-                            <a href="./receitas/artigo/id/<?php echo $receitas_destaque['id']; ?>" class="mais">continue lendo</a>
-                        </div>
-                      <?php endforeach; ?>
-                    </div><!-- Destaque -->
-
-                    <div id="chamadas">
-                        <ul id="blog">
-                            <?php foreach ($view_blog_lista as $blog_lista): ?>
-                                <li>
-                                    <span><?php echo $blog_lista['autor']; ?></span>
-                                    <h2><a href=".blog/artigo/id/<?php echo $blog_lista['id']; ?>"><?php echo $blog_lista['titulo']; ?></a></h2>
-                                </li>
-                            <?php endforeach; ?>
-                        </ul><!-- Novidades do blog -->
-
-                        <ul id="eventos">
-                            <?php foreach ($view_eventos_lista as $eventos_lista): ?>
-                                <li>
-                                    Dia <?php echo date('d/m/y', strtotime($eventos_lista['data'])); ?> - <a href="./eventos/artigo/id/<?php echo $eventos_lista['id']; ?>"><?php echo $eventos_lista['titulo']; ?></a>
-                                </li>
-                            <?php endforeach; ?>
-                        </ul><!-- Eventos -->
-                        <div class="clear"></div>
-                    </div><!-- Chamadas -->
+                    <div id="paginas">
+                        <h1>Quem Somos</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Fusce auctor tristique magna eu dapibus. Integer sed magna
+                            quam, sed aliquam lectus. Proin massa tortor, blandit in
+                            mattis sit amet, interdum nec nibh. Maecenas pellentesque
+                            lorem vitae risus vestibulum malesuada. Phasellus ante augue,
+                            molestie in facilisis sed, dictum in orci. Pellentesque
+                            tincidunt nibh nec diam ultricies eget auctor magna luctus.
+                            Aenean dictum porta diam, nec fermentum justo ornare in.
+                            Pellentesque at elit eu orci suscipit condimentum. Quisque
+                            non massa in justo tristique euismod eget ac purus. Suspendisse
+                            et ligula a lorem dignissim imperdiet. In hac habitasse
+                            platea dictumst. Cras id tortor viverra mauris viverra
+                            elementum.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Fusce auctor tristique magna eu dapibus. Integer sed magna
+                            quam, sed aliquam lectus. Proin massa tortor, blandit in
+                            mattis sit amet, interdum nec nibh. Maecenas pellentesque
+                            lorem vitae risus vestibulum malesuada. Phasellus ante augue,
+                            molestie in facilisis sed, dictum in orci. Pellentesque
+                            tincidunt nibh nec diam ultricies eget auctor magna luctus.
+                            Aenean dictum porta diam, nec fermentum justo ornare in.
+                            Pellentesque at elit eu orci suscipit condimentum. Quisque
+                            non massa in justo tristique euismod eget ac purus. Suspendisse
+                            et ligula a lorem dignissim imperdiet. In hac habitasse
+                            platea dictumst. Cras id tortor viverra mauris viverra
+                            elementum.
+                        </p>
+                    </div><!-- Paginas -->
                 </div><!-- Esquerda -->
 
                 <div id="dir">
@@ -86,17 +87,6 @@
                             <?php endforeach; ?>
                         </ul>
                     </div><!-- Receitas -->
-
-                    <div id="quem-somos">
-                        <img src="./web-files/images/quem-somos.jpg" width="265" height="107" alt="Quem somos" />
-                        <h4>Quem somos:</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Duis feugiat gravida diam vel sollicitudin. Ut ut tempus est.
-                            Quisque dignissim massa vel lorem.
-                        </p>
-                        <a href="#">Continue lendo</a>
-                    </div><!-- Quem somos -->
                 </div><!-- Direita -->
 
                 <div class="clear espaco-rodape"></div>

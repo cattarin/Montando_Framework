@@ -3,7 +3,7 @@
         protected $db;
         public $_tabela;
         public function __construct() {
-            $this->db = new PDO('mysql:host=localhost;dbname=blog', 'root', '');
+            $this->db = new PDO('mysql:host=localhost;dbname=sucosjuices', 'root', '');
         }
         
         public function insert( Array $dados) {
@@ -21,9 +21,12 @@
             return $this->db->query("INSERT INTO `{$this->_tabela}` ({$campos}) VALUES ({$valores})");
         }
         
-        public function read( $where = NULL) {
+        public function read( $where = NULL, $limit = null, $offset = null, $orderby = null) {
             $where = ($where != null ? "WHERE {$where}" : "");
-            $q = $this->db->query("SELECT * FROM `{$this->_tabela}` {$where}");
+            $limit = ($limit != null ? "LIMIT {$limit}" : "");
+            $offset = ($offset != null ? "OFFSET {$offset}" : "");
+            $orderby = ($orderby != null ? "ORDER BY {$orderby}" : "");
+            $q = $this->db->query("SELECT * FROM `{$this->_tabela}` {$where} {$orderby} {$limit} {$offset}");
             $q->setFetchMode(PDO::FETCH_ASSOC);
             return $q->fetchAll();
         }
